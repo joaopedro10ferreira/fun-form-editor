@@ -139,7 +139,7 @@ const CONFIG = {
   quizCount: 12847,           // número de mulheres que já fizeram o quiz (use o número real)
   stat: 87.5,                  // porcentagem da etapa 5
   statSource: "",              // fonte do dado (aparece abaixo do texto, se preenchido)
-  heroImage: "",
+  heroImage: "/__l5e/assets-v1/a9315149-a7df-4bab-8cca-9ff28bcc5e1a/capa-insulina.png",
   expertMedia: "",
   analysisExtraPhotos: [], // fotos extras na etapa de análise (adicione mais itens para mais espaços)
   analysisTestimonial: { img:"", text:"Depoimento da cliente aqui", who:"Nome, idade - Cidade" }, // antes e depois da etapa de análise
@@ -221,8 +221,7 @@ const steps = [
   <div style="margin:4px 0 12px"><img src="${IMG.logo}" alt="Segredo da Insulina" style="height:84px;width:auto;margin:0 auto"></div>
   <h1>As mulheres acima de 40 que não podem pagar o <em>Ozempic</em> estão apostando nessa mistura de <em>R$5</em></h1>
   <p class="sub" style="margin:0">Veja os resultados já nos primeiros dias.</p>
-  <div class="ph">${CONFIG.heroImage?`<img src="${CONFIG.heroImage}" alt="" style="border-radius:18px;width:100%">`:`<div class="slot" style="padding:120px 16px">Espaço para a foto ou vídeo da capa</div>`}
-  <span class="badge">a mistura de R$5</span></div>
+  <div class="ph">${CONFIG.heroImage?`<img src="${CONFIG.heroImage}" alt="" style="border-radius:18px;width:100%">`:`<div class="slot" style="padding:120px 16px">Espaço para a foto ou vídeo da capa</div>`}</div>
   <p style="color:var(--muted);margin:6px 0 0"><b style="color:var(--green)">+${Number(CONFIG.quizCount).toLocaleString('pt-BR')} mulheres</b> já descobriram a versão certa para o seu corpo</p>
   <button class="btn green" id="go">QUERO DESCOBRIR MINHA VERSÃO</button>
   <div class="trust"><span>100% gratuito</span><span>Resultado na hora</span><span>100% natural</span></div></div>`,
