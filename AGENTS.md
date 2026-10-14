@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Display the imported funnel from its editable HTML source in public/segredo-da-insulina.html through the index iframe to preserve the original presentation and quiz behavior.
