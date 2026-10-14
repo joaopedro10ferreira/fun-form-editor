@@ -124,6 +124,8 @@ details p{color:var(--muted);margin:10px 0 0}
 .hero h1{text-transform:uppercase;font-size:clamp(22px,5.4vw,30px);margin-bottom:8px}
 .hero .ph{position:relative;margin:18px -18px 0}
 .hero .ph img{display:block;width:100%}
+.news{padding:0;overflow:hidden;box-shadow:var(--shadow)}
+.news img{display:block;width:100%}
 .hero .badge{position:absolute;right:10px;bottom:30%;background:var(--blue);color:#fff;font-weight:800;padding:8px 16px;border-radius:99px;border:2px solid #fff}
 .trust{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin-top:12px}
 .trust span::before{content:"✓ ";color:var(--green)}
@@ -141,6 +143,7 @@ const CONFIG = {
   stat: 87.5,                  // porcentagem da etapa 5
   statSource: "",              // fonte do dado (aparece abaixo do texto, se preenchido)
   heroImage: "/__l5e/assets-v1/a9315149-a7df-4bab-8cca-9ff28bcc5e1a/capa-insulina.png",
+  newsImage: "/__l5e/assets-v1/cff50fa2-fc53-4c5a-95c8-e9df9398ae6e/noticia-g1.png",
   expertMedia: "",
   analysisExtraPhotos: [], // fotos extras na etapa de análise (adicione mais itens para mais espaços)
   analysisTestimonial: { img:"", text:"Depoimento da cliente aqui", who:"Nome, idade - Cidade" }, // antes e depois da etapa de análise
@@ -261,19 +264,9 @@ single('age','Qual a sua idade?',[{e:'🌸',t:'18 – 27 anos'},{e:'💐',t:'28 
       else { document.getElementById('ldg').style.display='none'; document.getElementById('stx').style.opacity=1; g.disabled=false; } };
     requestAnimationFrame(tick); } },
 /* 6 o que é a mistura */
-info(() => `<h1>O efeito da mistura de R$5 ⭐</h1>
-  <div class="card" style="padding:16px">
-    <div style="background:var(--blue);color:#fff;border-radius:10px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between">
-      <b style="font-size:15px">Segredo da Insulina</b><span style="font-size:20px;letter-spacing:1px">SAÚDE</span></div>
-    <h2 style="font-size:23px;line-height:1.2;margin:18px 0 10px;letter-spacing:-.3px">Especialista revela a mistura de R$5 que está ajudando milhares de mulheres a controlar a fome.</h2>
-    <p style="font-size:13px;color:var(--muted);margin:0 0 14px">Por <b style="color:var(--blue)">Equipe Segredo da Insulina</b></p>
-    <div style="background:#3B2416;border-radius:12px;padding:10px">
-      ${CONFIG.expertMedia?`<img src="${CONFIG.expertMedia}" alt="" style="width:100%;border-radius:8px">`:`<div class="slot" style="background:#4A3323;border-color:#7A5F4A;color:#EADFD2;padding:70px 16px">Espaço para o vídeo ou foto da sua especialista</div>`}
-      <div style="margin-top:8px">
-        <div style="background:var(--blue);color:#fff;font-weight:700;font-size:13px;padding:5px 10px;display:inline-block;border-radius:4px">ENTREVISTA EXCLUSIVA COM A ESPECIALISTA</div>
-        <div style="background:#fff;color:var(--blue-dark);font-weight:800;font-size:15px;padding:8px 10px;margin-top:4px;border-radius:4px">A MISTURA DE R$5 QUE AJUDA A SEGURAR A FOME</div>
-        <div style="background:#E9F7EF;color:var(--ink);font-weight:600;font-size:12px;padding:6px 10px;margin-top:4px;border-radius:4px">Receita simples, feita no liquidificador, com ingredientes de mercado</div>
-      </div></div>
+info(() => `<h1>O efeito do <em>Ozempic</em> por <em>R$ 5</em> ⭐</h1>
+  <div class="card news">
+    ${CONFIG.newsImage?`<img src="${CONFIG.newsImage}" alt="Reportagem do g1 Saúde: endócrino revela o truque que está substituindo o Ozempic">`:`<div class="slot" style="padding:120px 16px">Espaço para a captura da notícia</div>`}
   </div>`),
 /* 7 nome */
 { render: () => `<h1>Como posso te chamar?</h1><input class="input" id="nm" placeholder="Seu primeiro nome" value="${esc(S.name)}" autocomplete="given-name"><button class="btn" id="go" ${S.name.trim()?'':'disabled'}>Continuar</button>`,
