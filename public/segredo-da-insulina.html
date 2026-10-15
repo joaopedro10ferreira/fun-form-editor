@@ -379,7 +379,7 @@ info(() => { const v=imc(), al=[];
   <h2 class="center" style="font-size:19px;margin:24px 0 14px">O que o <span class="hl">Segredo da Insulina</span> traz pra você 👇</h2>
   ${['Receitas simples com ingredientes de mercado','Mais saciedade entre as refeições','Rotina que cabe no seu dia a dia','Mais disposição e energia','Sobremesas que cabem no plano'].map(b=>`<div class="ben">${b}</div>`).join('')}
   <div class="testi" style="margin-top:18px"><img src="${IMG.ad}" alt="Imagem ilustrativa de antes e depois" style="width:100%">
-    <div class="body" style="padding:8px"><div class="note" style="margin:0">Imagem meramente ilustrativa</div></div></div>
+    <div class="body" style="padding:12px 8px 14px;text-align:center"><div style="font-size:20px;font-weight:800;color:#422C1E;line-height:1.35">"Perdi 11kg em 5 semanas!"</div><div style="font-size:16px;color:#98765F;margin-top:8px">Rose, 52 anos – São Paulo</div><div style="font-size:25px;line-height:1.4;margin-top:8px" aria-label="5 estrelas">⭐⭐⭐⭐⭐</div></div></div>
   ${CONFIG.analysisExtraPhotos.map(p=>`<div class="testi" style="margin-top:18px">${p.img?`<img src="${p.img}" alt="${esc(p.caption||'Antes e depois')}" style="width:100%">`:`<div class="slot" style="border-radius:0;border-width:0;padding:110px 16px">Espaço para mais uma imagem de antes e depois</div>`}
     ${p.caption?`<div class="body" style="padding:8px"><div class="note" style="margin:0">${esc(p.caption)}</div></div>`:''}</div>`).join('')}`; }),
 /* 26 depoimentos */
